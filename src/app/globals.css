@@ -1,27 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  /* scroll-behavior: smooth; */
+  font-family: 'Manrope', sans-serif;
+  scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.gradient-text{
+  @apply bg-gradient-to-tr from-[#AE67FA] from-[1.84%] to-[#F49867] to-[102.67%] text-3xl lg:text-5xl bg-clip-text text-transparent font-black
+}
+.bar-gradient{
+  @apply bg-gradient-to-tr from-[#AE67FA] from-[13.86%] to-[#F49867] to-[99.55%] 
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.links{
+  @apply text-white font-semibold lg:text-[18px] text-sm leading-[25px] capitalize  space-x-4
 }
+
+.gradient__bg {
+  background:-moz-radial-gradient(circle at 3% 35%, rgba(0, 40, 83, 1) 2%, rgba(4, 12, 24, 1) 35%);
+
+  /* safari 5.1+,chrome 10+ */
+  background:-webkit-radial-gradient(circle at 3% 35%, rgba(0, 40, 83, 1) 2%, rgba(4, 12, 24, 1) 35%);
+
+  /* opera 11.10+ */
+  background:-o-radial-gradient(circle at 3% 35%, rgba(0, 40, 83, 1) 2%, rgba(4, 12, 24, 1) 35%);
+
+  /* ie 10+ */
+  background:-ms-radial-gradient(circle at 3% 35%, rgba(0, 40, 83, 1) 2%, rgba(4, 12, 24, 1) 35%);
+
+  /* global 92%+ browsers support */
+  background:radial-gradient(circle at 3% 35%, rgba(0, 40, 83, 1) 2%, rgba(4, 12, 24, 1) 35%);
+}
+
+.section_padding{
+  @apply py-[4rem] px-[5rem] max-[700px]:p-[4rem] max-[550px]:py-[4rem] max-[550px]:px-[2rem] 
+}
+.section_margin{
+  @apply my-[4rem] mx-[6rem] max-[700px]:m-[4rem] max-[550px]:my-[4rem] max-[550px]:mx-[2rem] 
+}
+
+.wrap{
+  flex-wrap: wrap;
+}
+
+/* Animations from 'Animista.net' */
